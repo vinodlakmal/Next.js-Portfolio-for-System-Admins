@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-// Note: Menu, X, ChevronDown imports removed as they're not used in current implementation
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,9 +22,9 @@ export default function Header() {
 
   const menuItems = [
     { href: '/', label: 'Home' },
-    { href: '#about', label: 'About' },
-    { href: '#skills', label: 'Skills' },
-    { href: '#experience', label: 'Experience' },
+    { href: '#about', label: 'About Me' },
+    { href: '#skills', label: 'Certifications' },
+    { href: '#experience', label: 'Projects' },
     { href: '#contact', label: 'Contact' }
   ];
 
@@ -37,12 +36,12 @@ export default function Header() {
     }`}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 sm:h-18 md:h-20 relative">
-          {/* Logo/Brand */}
+          {/* Logo/Brand - Vinod Lakmal / Merkei Solutions */}
           <Link 
             href="/" 
             className="text-xl sm:text-2xl md:text-3xl font-bold text-blue-600 sm:bg-gradient-to-r sm:from-blue-600 sm:to-purple-600 sm:bg-clip-text sm:text-transparent hover:from-blue-700 hover:to-purple-700 transition-all duration-300 py-2 -ml-1"
           >
-            Salman Shafi
+            Vinod Lakmal
           </Link>
 
           {/* Desktop Navigation */}
@@ -119,4 +118,4 @@ export default function Header() {
       </div>
     </header>
   );
-} 
+}
